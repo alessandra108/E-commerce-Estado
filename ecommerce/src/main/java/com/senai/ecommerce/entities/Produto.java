@@ -13,14 +13,13 @@ public class Produto {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	
 	private Long id;
 	private String nome;
 	private String descricao;
 	private double preco;
 	private String imgUrl;
+	
 	public Produto(Long id, String nome, String descricao, double preco, String imgUrl) {
-
 		this.id = id;
 		this.nome = nome;
 		this.descricao = descricao;
@@ -57,8 +56,5 @@ public class Produto {
 	public void setImgUrl(String imgUrl) {
 		this.imgUrl = imgUrl;
 	}
-	
-	
-
 	
 }
