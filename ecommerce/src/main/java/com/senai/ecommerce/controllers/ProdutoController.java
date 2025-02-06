@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.senai.ecommerce.services.ProdutoServices;
+import com.senai.ecommerce.services.ProdutoService;
 
 @RestController
 @RequestMapping(value = "/produto")
@@ -14,7 +14,7 @@ public class ProdutoController {
 
 	
 	@Autowired
-	ProdutoServices service;
+	ProdutoService service;
 	
 	@GetMapping
 	public ResponseEntity<?> buscar(){

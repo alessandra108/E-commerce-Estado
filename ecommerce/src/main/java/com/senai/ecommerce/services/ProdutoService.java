@@ -8,11 +8,8 @@ import org.springframework.stereotype.Service;
 import com.senai.ecommerce.entities.Produto;
 import com.senai.ecommerce.repositories.ProdutoRepository;
 
-public class ProdutoServices {
-
-	
-	@Service
-	public class ProdutoService{
+@Service
+public class ProdutoService{
 		
 		@Autowired
 		ProdutoRepository repo;
@@ -21,5 +18,4 @@ public class ProdutoServices {
 			List<Produto> list = repo.findAll();
 			return list;
 		}
-	}
 }

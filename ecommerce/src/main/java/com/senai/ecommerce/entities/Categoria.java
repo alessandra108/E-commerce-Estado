@@ -1,9 +1,13 @@
 package com.senai.ecommerce.entities;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
 
 
@@ -16,6 +20,9 @@ public class Categoria {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long Id;
 	private String nome;
+	
+	@ManyToMany(mappedBy = "categorias")
+	private Set<Produto> produtos = new HashSet<>();
 	
 	public Categoria() {
 	}
